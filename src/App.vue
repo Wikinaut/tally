@@ -198,22 +198,37 @@ export default {
 
     function addNewCounter() {
       const itemList = [
-        "Apples",
-        "Oranges",
-        "Bananas",
-        "Grapes",
-        "Limes",
-        "Peaches",
-        "Berries",
-        "Avocados",
+        "←Fahrrad",
+        "←Auto",
+        "←SUV",
+        "←Transp",
+        "←LKW",
+        "Fahrrad→",
+        "Auto→",
+        "SUV→",
+        "Transp→",
+        "LKW→",
+        "Fahrrad⇄",
+        "Auto⇄",
+        "SUV⇄",
+        "Transp⇄",
+        "LKW⇄",
       ];
-      const randomItem = itemList[Math.floor(Math.random() * itemList.length)];
 
-      counters.value.push({
-        id: nanoid(4),
-        name: randomItem,
-        value: 0,
-      });
+
+      if ( counters.value.length < itemList.length ) {
+          counters.value.push({
+            id: nanoid(4),
+            name: itemList[counters.value.length],
+            value: 0,
+          });
+      } else {
+          counters.value.push({
+            id: nanoid(4),
+            name: "←ZZZ⇄→",
+            value: 0,
+          });
+      }
 
       setTimeout(function () {
         window.scrollTo({
