@@ -2,7 +2,7 @@
 
 Simple tally counter which you can save as an app (PWA).
 
-<img src="https://github.com/Wikinaut/tally/raw/master/src/assets/screenshot.png" alt="screenshot" width="250px">
+<img src="https://github.com/Wikinaut/tally/raw/main/src/assets/screenshot.png" alt="screenshot" width="250px">
 
 ---
 
